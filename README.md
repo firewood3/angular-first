@@ -1,3 +1,37 @@
+# My first angular project 
+This is my angular study project. And this tutorial was provided by google.
+
+## Goal
+- Use built-in Angular directives to show and hide elements and display lists of hero data.
+- Create Angular components to display hero details and show an array of heroes.
+- Use one-way data binding for read-only data.
+- Add editable fields to update a model with two-way data binding.
+- Bind component methods to user events, like keystrokes and clicks.
+- Enable users to select a hero from a master list and edit that hero in the details view.
+- Format data with pipes.
+- Create a shared service to assemble the heroes.
+- Use routing to navigate among different views and their components.
+
+## The Application Shell
+
+## 1. The Hero Editor
+- You used the CLI to create a second HeroesComponent.
+- You displayed the HeroesComponent by adding it to the AppComponent shell.
+- You applied the UppercasePipe to format the name.
+- You used two-way data binding with the ngModel directive.
+- You learned about the AppModule.
+- You imported the FormsModule in the AppModule so that Angular would recognize and apply the ngModel directive.
+- You learned the importance of declaring components in the AppModule and appreciated that the CLI declared it for you.
+
+## 2. Displaying a List
+- The Tour of Heroes app displays a list of heroes in a Master/Detail view.
+- The user can select a hero and see that hero's details.
+- You used *ngFor to display a list.
+- You used *ngIf to conditionally include or exclude a block of HTML.
+- You can toggle a CSS style class with a class binding.
+
+
+
 # AngularFirst
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
