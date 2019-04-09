@@ -2,7 +2,32 @@
   heroes works!
 </p>
 
-<h2>{{hero.name | uppercase}} Details</h2>
+<div>
+  <label>Hero name:
+    <input #heroName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>
+</div>
+
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(hero)">x</button>
+  </li>
+</ul>
+
+<p class="my">my font</p>
+
+
+<h2>{{hero.name | uppercase}} 양방향 데이터 바인딩</h2>
 <div><span>id: </span>{{hero.id}}</div>
 <div><span>name: </span>{{hero.name}}</div>
 
@@ -11,18 +36,3 @@
     <input [(ngModel)]="hero.name" placeholder="name"/>
   </label>
 </div>
-
-<h2>My Heroes</h2>
-<ul class="heroes">
-  <li (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero===selectedHero">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-
-<app-hero-det [hero]="selectedHero"></app-hero-det>
-
-<p class="my">my font</p>
